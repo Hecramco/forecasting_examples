@@ -1,5 +1,3 @@
-# ⚡Forecast project:  Energy Data
-
 # ⚡ Forecasting Energy Consumption using Machine Learning
 
 **Developed by**: Hector M. Ramírez C.
