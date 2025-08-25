@@ -1,7 +1,8 @@
-# ⚡ Forecasting Energy Consumption using Machine Learning
+# ⚡ Forecasting using Machine Learning
 
 **Developed by**: Hector M. Ramírez C.
 **Dataset**: [Hourly Energy Consumption](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption/data) (Kaggle)
+
 
 ---
 
