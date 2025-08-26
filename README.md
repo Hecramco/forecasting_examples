@@ -1,61 +1,91 @@
-# ⚡ Forecasting using Machine Learning
+# ⚡ Forecasting with Machine Learning
 
-**Developed by**: Hector M. Ramírez C.
-**Dataset**: [Hourly Energy Consumption](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption/data) (Kaggle)
+**Developed by** : Hector M. Ramírez C.
 
+**Datasets** :
+
+* [Hourly Energy Consumption](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption/data) (Kaggle)
+* [Stock News &amp; Stock Prices](https://www.kaggle.com/) (Kaggle / public sources)
 
 ---
 
 ## 📌 Overview
 
-Energy consumption patterns offer valuable insight into how societies operate — and how we might build more sustainable futures. In a world where carbon emissions and climate change are urgent concerns, smarter use of energy is not just an economic decision, but an environmental imperative.
+This repository showcases **end-to-end forecasting pipelines** using machine learning on two domains:
 
-This project tackles a core sustainability challenge: **predicting energy demand**. By forecasting future consumption, utility companies and communities can better integrate renewable sources, optimize energy storage, and reduce fossil fuel reliance.
+1. **Energy Consumption Forecasting** – Predicting electricity demand to support more sustainable, efficient, and eco-friendly energy systems.
+2. **Stock Forecasting with Sentiment Analysis** – Exploring how combining financial time series with news sentiment can improve predictions in highly volatile markets.
+
+Both examples highlight how **machine learning can uncover hidden patterns in time-dependent data** and generate actionable insights.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
-This personal project aims to demonstrate a complete **end-to-end time series forecasting pipeline** using real-world data, driven by a strong interest in sustainability and AI for social good. My goals include:
-
-- Understanding energy usage patterns at scale
-- Applying both statistical and machine learning methods
-- Evaluating model effectiveness through rigorous metrics
-- Building a tool that could support more efficient, eco-friendly planning
+* Demonstrate forecasting workflows that mix **statistical methods, ML models, and feature engineering**
+* Highlight how **domain knowledge** (energy → sustainability, finance → sentiment/news) makes predictions more relevant
+* Show the versatility of ML applied to **different time series challenges**
+* Share a personal commitment to using AI for **sustainability and social good**
 
 ---
 
 ## 🧪 Technical Highlights
 
-- 📊 **Time Series Decomposition**: Extracted and visualized trend, seasonality, and noise
-- ⚙️ **Models Used**:
-  - **ARIMA** (Autoregressive Integrated Moving Average)
-  - **XGBoost Regressor** with engineered features (lags, rolling stats, etc.)
-- 🔁 **Cross-Validation**: TimeSeriesSplit to respect temporal order
-- 📈 **Model Evaluation**:
-  - RMSE: ~145 MW
-  - R² Score: 0.996 (very high accuracy)
-  - Residuals: Normally distributed, indicating low bias and good generalization
+### 🔋 Energy Consumption
+
+* **Methods** : ARIMA, XGBoost
+* **Features** : Lagged variables, rolling statistics, seasonal decomposition
+* **Results** :
+  * RMSE: ~145 MW
+  * R² Score: 0.996
+  * Residuals normally distributed → model generalizes well
+
+### 📈 Stock Prices with Sentiment
+
+* **Methods** : XGBoost, ARIMA, Feature engineering , Transformers/FinBERT (sentiment analysis on financial news)
+* **Features** : Numerical (stock prices), categorical (tickers), textual (news sentiment)
+* **Results** :
+  * RMSE: ~19.2 USD
+  * R² Score: 0.9825
+  * Demonstrates benefit of **multimodal forecasting**
 
 ---
 
-## 🌱 Why This Matters to Me
+## 🌱 Why This Matters
 
-I believe that **technology should serve people and the planet**. Forecasting energy demand isn't just a technical challenge — it's a piece of the broader puzzle in building sustainable infrastructure.
+Forecasting is more than just predicting numbers — it can guide  **real-world decisions** :
 
-This project reflects my long-term interest in:
+* ⚡ **Energy** → Better integration of renewable sources, reduced reliance on fossil fuels, smarter grid planning
+* 💹 **Finance** → Understanding market dynamics, bridging human behavior (news sentiment) with quantitative models
 
-- Clean tech and AI applications for **climate resilience**
-- Using data science to **reduce waste and optimize resources**
-- Contributing to solutions that align with the UN’s **Sustainable Development Goals (SDGs)**
+This dual focus reflects my personal interests in:
 
-I'm especially drawn to opportunities where machine learning can enable smarter environmental planning, and this project is a practical step in that direction.
+* Clean tech and **climate resilience**
+* **Data-driven decision-making** for complex systems
+* Applying ML where it can **benefit people and the planet**
 
 ---
 
 ## 📂 Project Structure
 
-* `data/`: This directory is used to store the energy data downloaded from kaggle.
-* `notebooks/:`: Jupyter Notebooks with exploratory analysis, preprocessing, modeling, and evaluation.
-* `saved_models/`: Storage of the las trained model.
-* `requirements.txt`: Requirements to run the experiments.
+```
+forecasting-examples/
+│
+├── data/             # Energy & stock datasets
+├── notebooks/        # Jupyter notebooks (EDA, preprocessing, modeling, evaluation)
+├── saved_models/     # Trained models
+├── requirements.txt  # Python dependencies
+└── README.md         # Project documentation
+```
+
+---
+
+## 🚀 Next Steps
+
+* Deploy simple dashboards for visualization
+
+---
+
+👉 This repository is meant to serve as a **portfolio project** showing forecasting skills in different domains, with an emphasis on  **sustainability and AI for social impact** .
+
+---
